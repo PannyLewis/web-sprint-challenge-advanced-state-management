@@ -59,8 +59,6 @@ const SmurfsForm = (props) => {
   );
 };
 
-// export default SmurfsForm;
-
 const mapStateToProps = (state) => {
   return {
     smurfs: state.smurfs,
