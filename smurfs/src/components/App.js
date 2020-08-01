@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 
 //components
-import SmurfsList from "./PlayersList";
-import SmurfsForm from "./PlayersForm";
+import SmurfsList from "./SmurfsList";
+import SmurfsForm from "./SmurfsForm";
 
 function App() {
   return (

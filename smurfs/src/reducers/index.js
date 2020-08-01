@@ -43,7 +43,7 @@ export const smurfsReducer = (state = initialSate, actions) => {
         ...state,
         isPosting: true,
         error: null,
-        smurfs: [...state.players],
+        smurfs: [...state.smurfs],
       };
     case POST_SUCCESS:
       return {

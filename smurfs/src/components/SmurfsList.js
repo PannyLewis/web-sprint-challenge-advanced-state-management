@@ -1,23 +1,22 @@
 import React, { useEffect } from "react";
-import smurfsCard from "./smurfsCard";
+import SmurfsCard from "./SmurfsCard";
 
 import { connect } from "react-redux";
-import { fetchsmurfs, postsmurfs } from "../actions;
+import { fetchSmurfs, postSmurfs } from "../actions";
 
-const smurfsList = (props) => {
+const SmurfsList = (props) => {
   useEffect(() => {
     props.fetchSmurfs();
   }, []);
 
   return (
     <div>
-      {props.smurfs.map((player) => (
-        <smurfsCard player={player} />
+      {props.smurfs.map((smurf) => (
+        <SmurfsCard smurf={smurf} />
       ))}
     </div>
   );
 };
-
 
 const mapStateToProps = (state) => {
   return {
@@ -32,4 +31,4 @@ const mapStateToDispatch = {
   postSmurfs,
 };
 
-export default connect(mapStateToProps, mapStateToDispatch)(smurfsList);
+export default connect(mapStateToProps, mapStateToDispatch)(SmurfsList);
